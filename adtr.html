@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade</title>
+    <link rel="stylesheet" href="adtr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="cont">
+        <div class="title">
+            <a href="trade.html"><i class="fa fa-chevron-left" style="color: white;"></i></a>
+            <p>Add trade</p>
+        </div>
+        <form name="submit-to-google-sheet">
+            <input type="text" placeholder="symbol" name="symbol">
+            <input type="radio" name="trade_type" id="long">
+            <label for="long">long</label>
+            <input type="radio" name="trade_type" id="short">
+            <label for="short">short</label>
+
+            <h4>Trade Type</h4>
+            <div class="btn">
+                <button type="button">positional</button>
+                <button type="button">swing</button>
+                <button type="button">intraday</button>
+                <button type="button">scalping</button>
+            </div>
+            <h4>Entry Date <input type="date" name="entry_date" id="date"> </h4>
+            <div class="gridcontainer">
+                <div><input type="text" placeholder="Quantity"></div>
+                <div class="item2"><input type="text" placeholder="Entry Price" name="price"></div>
+                <div class="item3"> <input type="text" placeholder="Stoploss" name="Stoploss"></div>
+                <div class="item4"> <input type="text" placeholder="Target Price" name="Targetprice"></div>
+            </div>
+            <div class="setup">
+                <select name="setup" id="setup"><option value="">setup</option></select>
+            </div>
+            <h4>Exit Date <input type="date" name="exit_date" id="exit_date"></h4>
+            <div class="grid">
+                <div><input type="text" placeholder="Exit Price" name="Exitprice"></div>
+                <div class="item2"><input type="text" placeholder="Fees (optional)" name="optionalfees"></div>
+            </div>
+            <div>
+                <button type="button">Cancel</button>
+                <button type="submit">Save</button>
+            </div>
+        </form>
+        
+        <small id="msg"></small>
+    </div>
+    <script src="adtr.js"></script>
+</body>
+
+</html>
